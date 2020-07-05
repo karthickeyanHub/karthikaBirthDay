@@ -1,0 +1,58 @@
+<template>
+    
+    <lightning-progress-indicator current-step={stepValue} type="base" has-error="true" variant="base">
+        <lightning-progress-step label="Step 1" value="1"></lightning-progress-step>
+        <lightning-progress-step label="Step 2" value="2"></lightning-progress-step>
+        <lightning-progress-step label="Step 3" value="3"></lightning-progress-step>
+        <lightning-progress-step label="Step 4" value="4"></lightning-progress-step>
+        <lightning-progress-step label="Step 5" value="5"></lightning-progress-step>
+        <lightning-progress-step label="Step 6" value="6"></lightning-progress-step>
+    </lightning-progress-indicator>
+    <lightning-record-edit-form record-id={recordId1} object-api-name="Care_Plan__c" onsuccess={handleSuccess1} onsubmit ={handleSubmit} >
+                            
+        <lightning-messages>
+            Information Updated
+        </lightning-messages>
+        <template if:true={screenOne}>
+            <lightning-file-upload
+            label="Attach receipt"
+            name="fileUploader"
+            accept={acceptedFormats}
+            record-id={recordId1}
+            onuploadfinished={handleUploadFinished}
+            multiple>
+            </lightning-file-upload>
+            <lightning-input-field field-name="Do_you_have_experience_using_caregivers__c"></lightning-input-field>
+            <lightning-input-field field-name="How_long_will_you_need_care__c"></lightning-input-field>
+        </template>
+        <template if:true={screenTwo}>
+            <lightning-input-field field-name="What_is_your_gender__c"></lightning-input-field>
+            <lightning-input-field field-name="When_would_you_like_care_to_begin__c"></lightning-input-field>
+        </template>
+        <template if:true={screenThree}>
+            <lightning-input-field field-name="Who_needs_care__c"></lightning-input-field>
+        </template>
+        <template if:true={screenFour}>
+            <lightning-input-field field-name="Which_daily_activities_do_you_need_help__c"></lightning-input-field>
+        </template>
+        <template if:true={screenFive}>
+            <lightning-input-field field-name="How_would_you_describe_your_disposition__c"></lightning-input-field>
+        </template>
+        <template if:true={screenSix}>
+                <lightning-file-upload label="Attach Photo" name="fileUploader" accept={acceptedFormats} record-id={recordId1} onuploadfinished={handleUploadFinished} multiple>
+        </lightning-file-upload>
+            <lightning-input-field field-name="Profile_Picture__c"></lightning-input-field>
+        </template>
+        <!-- <lightning-button variant="brand" label="prevoius" title="Primary action" onclick={handlePrevious} class="slds-m-left_x-small" disabled={isPrevButtonDisabled}></lightning-button>
+        <lightning-button variant="brand" label="Next" title="Primary action" onclick={handleNext} class="slds-m-left_x-small" disabled={isNextButtonDisabled}></lightning-button>
+
+        <lightning-button class="slds-m-top_small" variant="brand" type="submit" name="update" label="Update">
+        
+        </lightning-button>-->
+        <div class="slds-button-group" role="group">
+            <button class="slds-button slds-button_neutral"  onclick={handlePrevious} >Previous</button>
+            <button class="slds-button slds-button_neutral" onclick={handleNext} >Next</button>
+            <button class="slds-button slds-button_neutral" type="submit">Update</button>
+        </div>
+    </lightning-record-edit-form>
+</template>
