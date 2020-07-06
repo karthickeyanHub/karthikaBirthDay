@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>MS English Page</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		#myVideo {
+	  position: fixed;
+	  right: 0;
+	  bottom: 0;
+	  min-width: 100%; 
+	  min-height: 100%;
+	}
+
+	.content {
+		top:50%;
+	  position: relative;
+	  color: #000f;
+	  width: 100%;
+	  
+	  padding: 20px;
+	}
+	.resultcontent {
+		top:50%;
+	 position: absolute;
+	  background: rgba(0, 0, 0, 0.5);
+	  color: #f1f1f1;
+	  width: 100%;
+	  padding: 20px;
+	}
+
+	</style>
+</head>
+<body>
+	<audio id="myaudio">
+		<source src="Original_happy_Birthday_song.ogg" type="audio/ogg">
+  		<source src="Original_happy_Birthday_song.mp3" type="audio/mpeg">
+	 	
+		Your browser does not support the audio element.
+	</audio>
+
+	<video   id="myVideo">
+	  <source src="v-5eea11e114f78.mp4" type="video/mp4">
+	  Your browser does not support HTML5 video.
+	</video>
+	<div class="content">
+		<center>	
+			<div id="demo"></div>
+		</center>
+	</div>
+	<center>
+		<div id="result"></div>
+	</center>
+	
+	<script>
+		var answer ='';
+		var question='';
+		var myAnswer='';
+		var audio = document.getElementById("myaudio");
+		audio.autoplay = true;
+		audio.load();
+		var video = document.getElementById("myVideo");
+		var btn = document.getElementById("myBtn");
+		var x ="<input type=\"checkbox\" id=\"agery\" onchange=\"getContent()\" name=\"search\"> At the end of the session I will send the screenshot to Karthickeyan by whatsapp And answer are true From the heart, Only one try Please ";
+		video.pause();
+		document.getElementById("demo").innerHTML = x;
+		var con=true;
+		function getContent(){
+			document.getElementById("demo").innerHTML = '';
+			while(con){
+				var qu1 = prompt("How Much Do you love Karthickeyan  ", "0-100%");
+				if(qu1 >=0 && qu1<=100){
+					myAnswer='87';
+					question='How Much Do you love Karthickeyan 1';
+					answer=qu1;
+					con=false;
+					video.play();
+				}
+				else{
+					con=true;
+				}
+			}
+			var y = '<h1>Loading...</h1> <br/><img src="1.jpg" alt="Manoj" width="100%" height="100%">';
+			document.getElementById("demo").innerHTML = y;
+			setTimeout(question2, 3000);
+			
+		}
+		function question2(){
+			video.pause();
+			var con=true;
+			while(con){
+				var qu1 = prompt("How much Do you love to spead time with Karthickeyan ", "0-100%");
+				if(qu1 >=0 && qu1<=100){
+					myAnswer=myAnswer+','+'78';
+					question=question+','+'How Much Do you love Karthickeyan 2';
+					answer=answer+','+qu1;
+					con=false;
+					video.play();
+				}
+				else{
+					con=true;
+				}
+			}
+			var y = '<h1>Loading...</h1><img src="2.jpg" alt="Manoj" width="100%" height="100%">';
+			document.getElementById("demo").innerHTML = y;
+			setTimeout(question3, 3000);
+		}
+		function question3(){
+			video.pause();
+			var con=true;
+			while(con){
+				var qu1 = prompt("How much Do you love to spead time with Karthickeyan ", "0-100%");
+				if(qu1 >=0 && qu1<=100){
+					myAnswer=myAnswer+','+'78';
+					question=question+','+'How Much Do you love Karthickeyan 3';
+					answer=answer+','+qu1;
+					con=false;
+					video.play();
+				}
+				else{
+					con=true;
+				}
+			}
+			var y = '<h1>Loading...</h1><img src="3.jpg" alt="Manoj" width="100%" height="100%">';
+			document.getElementById("demo").innerHTML = y;
+			setTimeout(question4, 3000);
+		}
+		function question4(){
+			video.pause();
+			var con=true;
+			while(con){
+				var qu1 = prompt("How much Do you love to spead time with Karthickeyan ", "0-100%");
+				if(qu1 >=0 && qu1<=100){
+					myAnswer=myAnswer+','+'78';
+					question=question+','+'How Much Do you love Karthickeyan 4';
+					answer=answer+','+qu1;
+					con=false;
+					video.play();
+				}
+				else{
+					con=true;
+				}
+			}
+			var y = '<h1>Loading...</h1><img src="4.jpg" alt="Manoj" width="100%" height="100%">';
+			document.getElementById("demo").innerHTML = y;
+			setTimeout(question5, 3000);
+		}
+		function question5(){
+			video.pause();
+			var con=true;
+			while(con){
+				var qu1 = prompt("How much Do you love to spead time with Karthickeyan ", "0-100%");
+				if(qu1 >=0 && qu1<=100){
+					myAnswer=myAnswer+','+'90';
+					question=question+','+'How Much Do you love Karthickeyan 5';
+					answer=answer+','+qu1;
+					con=false;
+					video.play();
+				}
+				else{
+					con=true;
+				}
+			}
+			var y = '<h1>Loading...</h1><img src="5.jpg" alt="Manoj" width="100%" height="100%">';
+			document.getElementById("demo").innerHTML = y;
+			setTimeout(question6, 3000);
+		}
+		function question6(){
+			
+			var myAns = myAnswer.split(",");
+			var ans = answer.split(",");
+			var qus = question.split(",");
+			var x='<div class=\"resultcontent\"><table style=\"color:white;  border: 1px solid black;  border-collapse: collapse; \"><tr><td> Question </td><td>  &nbsp; &nbsp;Your answer </td><td>  &nbsp;  &nbsp;Karthickeyan Answer to you</td></tr>';
+			for (i=0; i<qus.length; i++) {
+				if(ans[i] !== '' && ans[i] !== 'null'){
+					x=x+'<tr><td style=\" align:left;\"> '+qus[i]+'</td><td  style=\" text-align: center;\"> '+ans[i]+'</td><td  style=\" text-align: center;\"> '+myAns[i]+'</td> </tr>'
+				}
+				else{
+					x='<div class=\"resultcontent\"><table> <tr><td>Dont Cheat Me!!!, you havent answered \"'+qus[i]+'\"</td></tr> '
+					break;
+				}
+			}
+			x=x+'</table><div><a href=\"C:\\Users\\user\\Desktop\\Birthday\\htmlPage\\5396f77366f55-turnjs4\\turnjs4\\samples\\magazine\\index.html\"><button type="button">My Pics!</button></a>';
+			var y = '<img src="5.jpg" alt="Manoj" width="100%" height="100%">';
+			document.getElementById("demo").innerHTML = y;
+			document.getElementById("result").innerHTML = x;
+		}
+		
+	</script>
+</body>
+</html>
