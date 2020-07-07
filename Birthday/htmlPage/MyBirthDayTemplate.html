@@ -62,16 +62,16 @@
 		audio.load();
 		var video = document.getElementById("myVideo");
 		var btn = document.getElementById("myBtn");
-		var x ="<input type=\"checkbox\" id=\"agery\" onchange=\"getContent()\" name=\"search\"> At the end of the session I will send the screenshot to Karthickeyan by whatsapp And answer are true From the heart, Only one try Please ";
+		var x ="<input type=\"checkbox\" id=\"agery\" onchange=\"getContent()\" name=\"search\"> <h1>At the end of the session I will send the screenshot to Karthickeyan by whatsapp And answer are true From the heart, Only one try Please </h1>";
 		video.pause();
 		document.getElementById("demo").innerHTML = x;
 		var con=true;
 		function getContent(){
 			document.getElementById("demo").innerHTML = '';
 			while(con){
-				var qu1 = prompt("How Much Do you love Karthickeyan  ", "0-100%");
+				var qu1 = prompt("How Much Do you love Karthickeyan? ", "0-100%");
 				if(qu1 >=0 && qu1<=100){
-					myAnswer='87';
+					myAnswer='85';
 					question='How Much Do you love Karthickeyan 1';
 					answer=qu1;
 					con=false;
@@ -83,16 +83,16 @@
 			}
 			var y = '<h1>Loading...</h1> <br/><img src="1.jpg" alt="Manoj" width="100%" height="100%">';
 			document.getElementById("demo").innerHTML = y;
-			setTimeout(question2, 3000);
+			setTimeout(question2, 1000);
 			
 		}
 		function question2(){
 			video.pause();
 			var con=true;
 			while(con){
-				var qu1 = prompt("How much Do you love to spead time with Karthickeyan ", "0-100%");
+				var qu1 = prompt("How much Do you love to spead time with Karthickeyan? ", "0-100%");
 				if(qu1 >=0 && qu1<=100){
-					myAnswer=myAnswer+','+'78';
+					myAnswer=myAnswer+','+'90';
 					question=question+','+'How Much Do you love Karthickeyan 2';
 					answer=answer+','+qu1;
 					con=false;
@@ -104,15 +104,15 @@
 			}
 			var y = '<h1>Loading...</h1><img src="2.jpg" alt="Manoj" width="100%" height="100%">';
 			document.getElementById("demo").innerHTML = y;
-			setTimeout(question3, 3000);
+			setTimeout(question3, 1000);
 		}
 		function question3(){
 			video.pause();
 			var con=true;
 			while(con){
-				var qu1 = prompt("How much Do you love to spead time with Karthickeyan ", "0-100%");
+				var qu1 = prompt("How much value does kaarthickeyan deserves in your life? ", "0-100%");
 				if(qu1 >=0 && qu1<=100){
-					myAnswer=myAnswer+','+'78';
+					myAnswer=myAnswer+','+'65';
 					question=question+','+'How Much Do you love Karthickeyan 3';
 					answer=answer+','+qu1;
 					con=false;
@@ -124,15 +124,15 @@
 			}
 			var y = '<h1>Loading...</h1><img src="3.jpg" alt="Manoj" width="100%" height="100%">';
 			document.getElementById("demo").innerHTML = y;
-			setTimeout(question4, 3000);
+			setTimeout(question4, 1000);
 		}
 		function question4(){
 			video.pause();
 			var con=true;
 			while(con){
-				var qu1 = prompt("How much Do you love to spead time with Karthickeyan ", "0-100%");
+				var qu1 = prompt("How much Does karthickeyan full filled your expectation? ", "0-100%");
 				if(qu1 >=0 && qu1<=100){
-					myAnswer=myAnswer+','+'78';
+					myAnswer=myAnswer+','+'90';
 					question=question+','+'How Much Do you love Karthickeyan 4';
 					answer=answer+','+qu1;
 					con=false;
@@ -144,15 +144,15 @@
 			}
 			var y = '<h1>Loading...</h1><img src="4.jpg" alt="Manoj" width="100%" height="100%">';
 			document.getElementById("demo").innerHTML = y;
-			setTimeout(question5, 3000);
+			setTimeout(question5, 1000);
 		}
 		function question5(){
 			video.pause();
 			var con=true;
 			while(con){
-				var qu1 = prompt("How much Do you love to spead time with Karthickeyan ", "0-100%");
-				if(qu1 >=0 && qu1<=100){
-					myAnswer=myAnswer+','+'90';
+				var qu1 = prompt("One major negative thing about karthickeyan ", "0-100%");
+				if(qu1 != null || qul1 !=''){
+					myAnswer=myAnswer+','+'Over Expectation might result in disapoinment';
 					question=question+','+'How Much Do you love Karthickeyan 5';
 					answer=answer+','+qu1;
 					con=false;
@@ -164,7 +164,7 @@
 			}
 			var y = '<h1>Loading...</h1><img src="5.jpg" alt="Manoj" width="100%" height="100%">';
 			document.getElementById("demo").innerHTML = y;
-			setTimeout(question6, 3000);
+			setTimeout(question6, 1000);
 		}
 		function question6(){
 			
